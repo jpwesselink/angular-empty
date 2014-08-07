@@ -42,8 +42,20 @@ Make it run our example
 
 				$log.info('myObject after', myResultObject);
 
-				$log.info('are resultObject and myObject the same?', myResultObject ===
+				$log.info('are myResultObject and myObject the same?', myResultObject ===
 					myObject);
+
+
+				var myArray = [1, 2, 3];
+
+				$log.info('myArray before', myArray);
+
+				var myResultArray = empty(myArray);
+
+				$log.info('myArray after', myResultArray);
+
+				$log.info('are myResultArray and myArray the same?', myResultObject ===
+					myArray);
 			}
 		]);
 
