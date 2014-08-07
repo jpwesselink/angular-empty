@@ -54,7 +54,7 @@ Make it run our example
 
 				$log.info('myArray after', myResultArray);
 
-				$log.info('are myResultArray and myArray the same?', myResultObject ===
+				$log.info('are myResultArray and myArray the same?', myResultArray ===
 					myArray);
 			}
 		]);
