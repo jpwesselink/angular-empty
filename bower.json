@@ -1,0 +1,24 @@
+{
+  "name": "angular-empty",
+  "version": "0.0.0",
+  "authors": [
+    "JP Wesselink <jpwesselink@gmail.com>"
+  ],
+  "description": "Service for emptying objects",
+  "main": "empty.js",
+  "keywords": [
+    "angular",
+    "object",
+    "empty"
+  ],
+  "license": "MIT",
+  "homepage": "http://jpwesselink.github.io/angular-empty",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
