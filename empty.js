@@ -4,31 +4,35 @@ angular.module('angular-empty', [])
 
 		var empty = function (target) {
 
-			if (angular.isObject(target)) {
-				return _clearObject(target);
-			} else if (angular.isArray(target)) {
+			if (angular.isArray(target)) {
 				return _clearArray(target);
+			} else if (angular.isObject(target)) {
+				return _clearObject(target);
 			}
 			return target;
 		};
 
 		var _clearObject = function (target) {
-      var keys = [];
+			var keys = [];
 
-			/*jslint unparam: true*/
-			angular.forEach(target, function (value, key) {
-				keys.push(key);
-			});
-			angular.forEach(keys, function (key) {
-				delete target[key];
-			});
+			for (var key in target) {
+				if (target.hasOwnProperty(key)) {
+					keys.push(key);
+				}
+			}
+			for (var i = 0; i < keys.length; i++) {
+				delete target[keys[i]];
+			}
+
 			return target;
 		};
 
-    var _clearArray = function (target) {
-      target.length = 0;
-      return target;
-    };
+		var _clearArray = function (target) {
+			while (target.length > 0) {
+				target.pop();
+			}
+			return target;
+		};
 
-    return empty;
+		return empty;
 	});
