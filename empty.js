@@ -1,4 +1,4 @@
-angular.module('jp10k.angular-empty', [])
+angular.module('angular-empty', [])
 	.service('empty', function () {
 		'use strict';
 
