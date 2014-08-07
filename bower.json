@@ -1,10 +1,10 @@
 {
   "name": "angular-empty",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "JP Wesselink <jpwesselink@gmail.com>"
   ],
-  "description": "Service for emptying objects",
+  "description": "Service for emptying objects and arrays",
   "main": "empty.js",
   "keywords": [
     "angular",

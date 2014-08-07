@@ -3,7 +3,17 @@ angular.module('jp10k.angular-empty', [])
 		'use strict';
 
 		var empty = function (target) {
-			var keys = [];
+
+			if (angular.isObject(target)) {
+				return _clearObject(target);
+			} else if (angular.isArray(target)) {
+				return _clearArray(target);
+			}
+			return target;
+		};
+
+		var _clearObject = function (target) {
+      var keys = [];
 
 			/*jslint unparam: true*/
 			angular.forEach(target, function (value, key) {
@@ -14,5 +24,11 @@ angular.module('jp10k.angular-empty', [])
 			});
 			return target;
 		};
-		return empty;
+
+    var _clearArray = function (target) {
+      target.length = 0;
+      return target;
+    };
+
+    return empty;
 	});
